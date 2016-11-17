@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Futurama Quiz</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="theme.css">
+    <style type="text/css">
+        @font-face {
+            font-family: "Futurama";
+            src: url(futurama/fr-title.ttf) format("truetype");
+        }
+        h1.futurama {
+            font-family: "Futurama";
+        }
+    </style>
+</head>
+<body>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<h1 class="title futurama">Futurama Quiz!</h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-md-4">
+				<div id="userInfo">
+					<h2>Hello, <span id="userName">USERNAME</span></h2>
+					<p>You have answered <span id="userScore">USER SCORE</span> correctly</p>
+				</div>
+			</div>
+
+			<div class="col-xs-12 col-md-8">
+				<div id="questionBlock">
+					<h2>Question</h2>
+					
+					<div id="questionArea">
+						<p id="questionDisplay">ADD QUESTION HERE</p>
+						<div id="possibleAnswersDisplay" class="clearfix">
+							ADD ANSWERS HERE
+						</div>
+			        </div>
+
+					<a href="#" id="finalAnswer" class="btn btn-block btn-primary">Final Answer</a>
+
+			        <div id="messageArea"></div>
+		        </div>
+			</div>
+		</div>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="main.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
