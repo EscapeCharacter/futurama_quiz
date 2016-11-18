@@ -6,7 +6,7 @@ var quizInfo = {
     , passScore: 70
 }
 var questionsAjax = {
-    url: baseUrl + '/questions'
+    url: baseUrl + '/questions?_limit=5'
     , method: 'GET'
 };
 var userAjax = {
@@ -45,6 +45,7 @@ function updateDisplay() {
 };
 // write next question here
 function displayNextQuestion() {
+    console.log(questions);
     $('#questionDisplay').html(questions[quizInfo.whichQuestion].question);
 }
 // display next answers here
@@ -84,18 +85,16 @@ function checkAnswers() {
     }
     if(gameIsOver()) {
         alert('Game is over');
+       
         init();
+    }else{
+        // if the game isnt over yet
+        quizInfo.whichQuestion++;
+        displayNextQuestion();
+        displayNextPossibleAnswers();
+        updateDisplay();
     }
-    // is there another question
-    // if yes display next question
-    // if no play closing screen
-    // reset quiz
-    
-    
-    quizInfo.whichQuestion++;
-    displayNextQuestion();
-    displayNextPossibleAnswers();
-    updateDisplay();
+   
 }
 
 function gameIsOver() {
